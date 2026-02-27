@@ -492,194 +492,108 @@ body {
     gap: 15px;
     margin-top: 20px;
 }
-
-.item-card {
-    background: #FFFFFF;
-    border: 1px solid #D8DADC;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: left;
+.profile-card {
+  background: #1e2430;
+  width: 350px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  color: white;
 }
 
-.item-card img {
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.edit-btn {
+  background: #3b82f6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background: #ef4444;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #2a3142;
+  color: white;
+  margin-bottom: 15px;
+}
+
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+@media (max-width: 480px) {
+  .profile-card,
+  .auth-card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  button {
     width: 100%;
-    border-radius: 4px;
+    margin-top: 10px;
+  }
 }
-
-.item-name {
-    font-size: 12px;
-    font-weight: bold;
-    color: #393B3D;
-    margin-top: 5px;
-    display: block;
-}
-
-.item-price {
-    font-size: 11px;
-    color: #656667;
-}
-/* Кнопка Sign Up в стиле Roblox */
-.signup-btn {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 5px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.signup-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Сетка для предметов (как на скриншоте) */
-.wearing-grid {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
-.item-slot {
-    width: 110px;
-    height: 110px;
-    background-color: #ffffff;
-    border: 1px solid #d8dadc;
-    border-radius: 8px;
-    display: flex;
+@media (max-width: 768px) {
+  .wrapper {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 5px;
+  }
 }
-
-.item-slot img {
-    max-width: 80%;
-    max-height: 70%;
-}
-
-.item-label {
-    font-size: 10px;
-    color: #656667;
-    margin-top: 4px;
-    text-align: center;
-}
-
-/* Скрытие формы по умолчанию */
-#registration-overlay {
-    display: none; /* Форма скрыта */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-/* Шапка сайта */
-.navbar {
-    background-color: #232527;
-    height: 40px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-/* Кнопка Sign Up вверху */
-.signup-top-btn {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Скрытое окно регистрации */
-.modal-overlay {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Затемнение фона */
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-
-/* Контейнер самой формы внутри окна */
-.modal-content {
-    background: #393b3d;
-    padding: 30px;
-    border-radius: 8px;
-    position: relative;
-    width: 320px;
-}
-
-/* Кнопка закрытия (крестик) */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: white;
-    cursor: pointer;
+@media (max-width: 480px) {
+  h2 {
     font-size: 20px;
-}
-/* Верхняя панель управления */
-.navbar {
-    background-color: #232527; /* Темный цвет Roblox */
-    height: 40px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 20px;
-    position: absolute; /* Чтобы не создавала пустых полос */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
+  }
 
-/* Кнопка Sign Up */
-.signup-top-btn {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.signup-top-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Окно регистрации (модалка) */
-.modal-overlay {
-    display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
+  button {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85); /* Затемнение всего экрана */
-    justify-content: center;
+  }
+
+  .profile-card,
+  .auth-card {
+    padding: 20px;
+  }
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 40px;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
     align-items: center;
-    z-index: 2000;
+  }
+
+  .profile-card,
+  .auth-card {
+    width: 90%;
+    max-width: 400px;
+  }
 }
